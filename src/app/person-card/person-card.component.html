@@ -1,0 +1,43 @@
+<div class="card">
+    <div class="title">
+        {{person.name}}
+    </div>
+    <div class="general-data">
+        <div>Gender: {{person.gender}}</div>
+        <div>Mass: {{person.mass}} Kg</div>
+        <div>Height: {{person.height}} cm</div>
+        <div>HomeWorld: {{person.homeworld}}</div>
+
+        <p class="sub-title">Physical features</p>
+        <ul>
+            <li>Eye color: {{person.eye_color}}</li>
+            <li>Hair color: {{person.hair_color}}</li>
+            <li>Skin color: {{person.skin_color}}</li>
+        </ul>
+        
+        <p class="sub-title">Films</p>
+        <ul *ngFor="let film of person.films">
+            <li>{{film}}</li>
+        </ul>
+        
+        <p class="sub-title">Startships</p>
+        <ul *ngFor="let ships of person.starships">
+            <li>{{ships}}</li>
+        </ul>
+        
+        <p class="sub-title">Vehicles</p>
+        <ul *ngFor="let vehicle of person.vehicles">
+            <li>{{vehicle}}</li>
+        </ul>
+        
+        <div *ngIf="person.species && person.species.length">
+            Species
+            <ul *ngFor="let specie of person.species">
+                <li>{{specie}}</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+

@@ -11,16 +11,16 @@ export class PersonService {
 
   constructor(private http: HttpClient) { }
 
-  getAll(page?: number, wookie?: boolean) {
+  getAll(page?: number, wookie?: string) {
     let params: HttpParams = new HttpParams()
     params = page ? params.append('page', page) : params;
-    params = wookie ? params.append('wookie', wookie) : params;
+    params = wookie ? params.append('format', wookie) : params;
     return this.http.get<Person[]>( baseUrl, {params});
   }
 
-  getPerson(id: number, wookie?: boolean) {
+  getPerson(id: number, wookie?: string) {
     let params: HttpParams = new HttpParams()
-    params = wookie ? params.append('wookie', wookie) : params;
+    params = wookie ? params.append('format', wookie) : params;
     return this.http.get<Person>( `${baseUrl}/${id}`, {params});
   }
 }
