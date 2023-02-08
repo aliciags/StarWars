@@ -12,4 +12,5 @@ export class Person {
 	species?: string[];
 	starships?: string[];
 	vehicles?: string[];
+	url?: string;
 }

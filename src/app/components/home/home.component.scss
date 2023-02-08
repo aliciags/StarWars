@@ -1,0 +1,15 @@
+.scroll-container {
+    margin: 40px;
+    // height: 700px;
+    // width: 1000px;
+    overflow: auto;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 35px;
+    height: 75vh;
+}

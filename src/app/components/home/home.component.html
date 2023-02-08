@@ -1,0 +1,11 @@
+<div class="scroll-container"
+	infinite-scroll
+	[scrollWindow]="false"
+	(scrolled)="onScrollDown($event)" 
+>
+	<div class="card-container">
+		<div *ngFor="let person of people, let i = index">
+			<person-card [person]="person" [id]="person.url!"></person-card>
+		</div>
+	</div>
+</div>
